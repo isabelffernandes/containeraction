@@ -1,0 +1,14 @@
+name: 'container action'
+description: 'Learning GitHubAction'
+author: 'Isabel'
+inputs:
+  myInput:
+    description: 'greeting to use GHA'
+    required: true
+    default: 'Action'
+outputs:
+  myOutput:
+    description: 'total memory'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
