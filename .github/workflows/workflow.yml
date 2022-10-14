@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: girls run the world
+      id: beyonce
+      uses: ./
+      with:
+        myInput: 'Isa'
+    - name: output the memory
+      run: |
+        echo ${{ steps.beyonce.outputs.memory }}
+        echo "total nemo memory"
